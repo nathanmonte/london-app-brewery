@@ -7,4 +7,4 @@ npm install
 npm run test
 ```
 
-You can change the values of the test arrays in this file. 
+You can change the values of the test arrays in the `TightRoper.ts` file. 
