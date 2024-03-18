@@ -6,7 +6,7 @@ type MaxBuildingPoints = {
 }
 
  /**
- * Calculate a rectangle from two points containing an x and a y.
+ * Calculate a rectangle's area from two points containing an x and a y.
  * 
  * @param {BuildingPoint} point1 Building at point 1.
  * @param {BuildingPoint} point2 Building at point 2.
@@ -60,6 +60,13 @@ export const tightRoper = (buildings: number[]) => {
         }
     }
     
-    console.log(max);
     return max.currentValue;
 }
+
+const test1 = [1,8,6,2,5,4,8,3,7];
+const test2 = [100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 101, 49, 54, 32, 49];
+const test3 = [10,10,10];
+
+console.log("Largest area value for test 1: ", tightRoper(test1));
+console.log("Largest area value for test 2: ", tightRoper(test2));
+console.log("Largest area value for test 3: ", tightRoper(test3));
