@@ -48,13 +48,13 @@ export const tightRoper = (buildings: number[]) => {
             continue;
         }
 
-        /** We need a way of exiting the function early when we've definitely. */
+        // Calculate the new options.
         const option1 = calculateRectangleArea(max.point1!, nextBuilding), option2 = calculateRectangleArea(max.point2!, nextBuilding);
 
         // Find the highest value option as this is the one we will keep if higher than current max. 
         const nextMax = option1 > option2 ? {point1: max.point1, point2: nextBuilding, currentValue: option1} : {point1: nextBuilding, point2: max.point2, currentValue: option2};
 
-        /** If bigger than the current value then we need */
+        /** If bigger than the current value then we need to store the new value. */
         if (nextMax.currentValue! > max.currentValue!) {
             max = nextMax;
         }
