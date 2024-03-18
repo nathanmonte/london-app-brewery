@@ -44,7 +44,7 @@ export const tightRoper = (buildings: number[]) => {
         // On second run set the point2 to current value as empty.
         if (i === 1) {
             max.point2 = nextBuilding;
-            max.currentValue = calculateRectangleArea(max.point1 as BuildingPoint, max.point2);
+            max.currentValue = calculateRectangleArea(max.point1!, max.point2);
             continue;
         }
 
@@ -59,10 +59,7 @@ export const tightRoper = (buildings: number[]) => {
             max = nextMax;
         }
     }
-
+    
+    console.log(max);
     return max.currentValue;
 }
-
-const test1 = [1,8,6,2,5,4,8,3,7];
-const test2 = [100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 100, 49, 54, 32, 49,100, 7, 48, 48, 101, 49, 54, 32, 49];
-
